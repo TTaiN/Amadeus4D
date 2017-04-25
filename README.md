@@ -1,10 +1,14 @@
 # Amadeus4D
 
-Amadeus is a [Discord](https://discordapp.com/) music bot developed in Java 8, which utilizes the [Discord4J Java interface](https://github.com/austinv11/Discord4J). It plays music requested by users over VoIP, allowing them to listen to music together.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TTaiN/Amadeus4D/master/images/transparent_logo.png">
+</p>
+
+Amadeus is a  music bot developed 4D ("for [Discord](https://discordapp.com/)") in Java 8, which utilizes the [Discord4J Java interface](https://github.com/austinv11/Discord4J). It plays music requested by users over VoIP, allowing them to listen to music together.
 
 It is designed for scalablity and portability, and thus utilizes a [MySQL](https://github.com/mysql/mysql-server) database server for persistence (using [HikariCP](https://github.com/brettwooldridge/HikariCP) for connection pooling) and [lavaplayer](https://github.com/sedmelluq/lavaplayer) for audio streaming. 
 
-More information can be found at [my site.](http://pupgramming.me/)
+More information can be found at [my site.](http://ttain.tk/) 
 
 ### Features
  
@@ -93,6 +97,9 @@ java -cp Amadeus.jar ttain.amadeus.discord.Amadeus
 -> How do I make my bot logout?
 * Private message your bot and type "**!terminate**" without the quotes. Additionally, through private messages, you can also change the bot's avatar, status, etc. Refer to **ttain.amadeus.discord.modules.administration.AdministrationManager**.
 * Make sure you set yourself as a developer in the database, which you've likely already done as part of the setup.
+
+-> What does Amadeus mean?
+* The term [**Amadeus**](http://steins-gate.wikia.com/wiki/Amadeus) references the name of a memory storage and artificial intelligence system developed by [Kurisu Makise](http://steins-gate.wikia.com/wiki/Makise_Kurisu) from [Steins;Gate 0](https://en.wikipedia.org/wiki/Steins;Gate_0). It was selected as the name of my development team.
 
 # Dependencies
 
