@@ -1,7 +1,7 @@
 # Amadeus4D
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TTaiN/Amadeus4D/master/images/transparent_logo.png">
+  <img src="https://raw.githubusercontent.com/TTaiN/Amadeus4D/master/images/logo_resized.png">
 </p>
 
 Amadeus is a  music bot developed 4D ("for [Discord](https://discordapp.com/)") in Java 8, which utilizes the [Discord4J Java interface](https://github.com/austinv11/Discord4J). It plays music requested by users over VoIP, allowing them to listen to music together.
