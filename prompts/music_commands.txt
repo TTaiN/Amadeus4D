@@ -1,0 +1,39 @@
+__Music Commands__
+
+``[music_key]help``
+    > Shows information.
+``[music_key]djs``
+    > Shows you who can currently use music player commands.
+``[music_key]mods``
+    > Shows you who can add or remove DJs.
+``[music_key]join``
+    > Make the bot join your voice channel.
+``[music_key]leave``
+    > Make the bot leave the voice channel its in.
+``[music_key]request`` http://youtube.com/v?=EXAMPLE_URL
+    > Puts a song to be played in the queue. Youtube/SoundCloud/Direct URLs only.
+``[music_key]playing``
+    > Displays the current song URL being played.
+``[music_key]playlist`` or ``[music_key]queue``
+    > Shows the order of the songs that will be played.
+``[music_key]shuffle``
+    > Shuffles the queue randomly.
+``[music_key]loop``
+    > Enables looping of the playlist.
+``[music_key]pause``
+    > Pauses music playback.
+``[music_key]resume``
+    > Resumes music playback.
+``[music_key]skip #``
+    > Skip the current track to the # in queue. Skips to next track if # empty.
+``[music_key]remove #``
+    > Removes a track from the queue.
+``[music_key]reset``
+    > Remove all songs in queue and start empty.
+``[music_key]volume #``
+    > Sets the BOT voice volume. Range is 0 to 150.
+``[music_key]yt`` query
+    > Searches YouTube for the video you are looking for.
+		> To play songs, use ``[music_key]play #`` from the search results.
+``[music_key]commands``
+    > Print this message containing all the commands.

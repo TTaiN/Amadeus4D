@@ -1,0 +1,14 @@
+__General Commands__
+
+``[general_key]getavatar (@)User``
+    > Gets the Discord avatar for the user you mention.
+``[general_key]flip``
+    > Flips a coin and returns heads or tails.
+``[general_key]roll #``
+    > Rolls a #-sided dice. If no # given, assumes a 6-sided dice.
+``[general_key]yesorno``
+    > Tells you yes or no. Useful for making life decisions.
+``[general_key]help``
+    > Shows information.
+``[general_key]commands``
+    > Lists these commands.
