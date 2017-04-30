@@ -115,7 +115,7 @@ public class MusicManager
         try
         {
             IPrivateChannel channel = client.getOrCreatePMChannel(owner);
-            channel.sendMessage(IO.textFileToString("./prompts/new_guild.txt", Charset.defaultCharset()).replace("[music_key]", this.key).replace("[general_key]", GeneralManager.key));
+            channel.sendMessage(IO.textFileToString("./prompts/new_guild.txt", Charset.defaultCharset()).replace("[music_key]", MusicManager.key).replace("[general_key]", GeneralManager.key));
         }
         catch (Exception e)
         {
@@ -145,13 +145,9 @@ public class MusicManager
     private GuildProvider getGuildProvider(IGuild guild)
     {
         long id = Long.parseLong(guild.getID());
-        GuildProvider provider = players.get(id);
+        players.putIfAbsent(id, new GuildProvider(playerManager));
 
-        if (provider == null)
-        {
-            provider = new GuildProvider(playerManager);
-            players.put(id, provider);
-        }
+        GuildProvider provider = players.get(id);
 
         guild.getAudioManager().setAudioProvider(provider.getAudioProvider());
 
@@ -262,7 +258,7 @@ public class MusicManager
         }
         catch (DJNotFoundException e)
         {
-            Communicator.sendTempMessage(message.getChannel(), message.getAuthor() + ", you aren't a DJ.\n\nTo become a DJ, have the guild owner or a moderator enter the command **/ad**.\n\n");
+            Communicator.sendTempMessage(message.getChannel(), message.getAuthor() + ", you aren't a DJ.\n\nTo become a DJ, have the guild owner or a moderator enter the command **" + key + "addDJ** " + message.getAuthor() + "\n\n");
         }
         catch (SQLException e)
         {
@@ -323,7 +319,7 @@ public class MusicManager
                 default: // Gets here if a user tries to do a command but the channel isn't being listened to.
                     if (!listening)
                     {
-                        Communicator.sendTempMessage(message.getChannel(), "Not listening for music commands in this channel.\n\nTo listen to this channel for commands, have the guild owner enter the command **-listen**.\n\n" + permissions.getPrintableChannels(message.getGuild().getID()));
+                        Communicator.sendTempMessage(message.getChannel(), "Not listening for music commands in this channel.\n\nTo listen to this channel for commands, have the guild owner enter the command **" + key + "listen**.\n\n" + permissions.getPrintableChannels(message.getGuild().getID()));
                     }
                     break;
             }
